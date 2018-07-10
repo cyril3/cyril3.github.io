@@ -25,6 +25,7 @@ github_username:  cyril3
 # Build settings
 markdown: kramdown
 theme: minima
+timezone: Asia/Chongqing
 #plugins:
 #  - jekyll-feed
 
