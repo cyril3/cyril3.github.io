@@ -26,6 +26,7 @@ github_username:  cyril3
 markdown: kramdown
 theme: minima
 timezone: Asia/Chongqing
+permalink: /:year/:month/:day/:title
 #plugins:
 #  - jekyll-feed
 
