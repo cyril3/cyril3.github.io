@@ -111,7 +111,7 @@ TEST_GROUP_RUNNER(add)
 
 四、拓展
 =============
-　　在 test 工程路径下，有这么几个文件：
+　　在 test/settings 路径下，有这么几个文件：
 ```
 test.Debug.cspy.bat
 test.Debug.cspy.ps1
