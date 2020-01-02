@@ -21,7 +21,7 @@ tags: [IAR, Unit Test]
 
 　　Semihosting 是 ARM 处理器独有的特性。它能使 ARM 目标机通过调试器和主机通讯，或者使用主机的I/O设备。此功能可以单元测试程序使用 printf 等方法输出测试信息。非常方便。其他类型的处理器也会有相应的机制完成此任务。
 
-　　接下来，在“Debugger”选项中将调试驱动选为“Simulator”。入下图所示：
+　　接下来，在“Debugger”选项中将调试驱动选为“Simulator”。如下图所示：
 
 ![debugger](/asserts/iar-ut/debugger.png)
 
