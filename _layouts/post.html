@@ -24,20 +24,4 @@ layout: default
   {%- endif -%}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-  <div id="gitmentContainer"></div>
-  <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-  <script>
-    var gitment = new Gitment({
-      id: '{{page.title}}',
-      owner: 'cyril3',
-      repo: 'cyril3.github.io',
-      oauth: {
-        client_id: '693c7bba67726ad96b96',
-        client_secret: 'd8f2db20e80aa9d731cb831e9b3850c5f1539b1c',
-      },
-      
-    });
-    gitment.render('gitmentContainer');
-  </script>
 </article>
