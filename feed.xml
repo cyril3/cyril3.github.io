@@ -1,4 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-01-25T12:28:43+08:00</updated><id>/feed.xml</id><title type="html">Bingwhispers</title><subtitle>Hi there!</subtitle><entry><title type="html">今非昔比的书店</title><link href="/2020/05/20/bookshop-changed" rel="alternate" type="text/html" title="今非昔比的书店" /><published>2020-05-20T22:45:00+08:00</published><updated>2020-05-20T22:45:00+08:00</updated><id>/2020/05/20/bookshop-changed</id><content type="html" xml:base="/2020/05/20/bookshop-changed"><![CDATA[<p>  今天吃完午饭，我和子晨去了附近的一家书店。这家书店有一个奇怪的名字——言几又。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-01-26T14:12:51+08:00</updated><id>/feed.xml</id><title type="html">Bingwhispers</title><subtitle>Hi there!</subtitle><entry><title type="html">群晖 NAS 使用心得（上）</title><link href="/2022/01/26/experiences-on-synology-nas-1" rel="alternate" type="text/html" title="群晖 NAS 使用心得（上）" /><published>2022-01-26T13:56:00+08:00</published><updated>2022-01-26T13:56:00+08:00</updated><id>/2022/01/26/experiences-on-synology-nas-1</id><content type="html" xml:base="/2022/01/26/experiences-on-synology-nas-1"><![CDATA[<p>  2017 年，我购买了第一台 NAS：群晖 DS216j。当时最主要的需求就是数据存储。文档资料、影音视频、家庭照片，这些资料随着时间的推移，越积越多。单纯使用 PC 硬盘管理资料已经无法满足需求了。我曾经考虑过在线网盘，但是大部分网盘产品都需要用户在存储容量、传输带宽和订阅费用三者间取舍。况且，虽然技术上，网盘能够很好地保证数据的安全性。但是仍然有很多非技术性因素，让我对网盘上的数据安全性充满担心——NAS 几乎是必然的选择。</p>
+
+<p>  DS216j 是群晖的入门级产品，价格低，最大支持两块硬盘，性价比非常高。了解群晖 NAS 的读者可能会对我的说法嗤之以鼻：DS216j 如此孱弱的性能如何称得上性价比高？这里的性价比，比的可不是性能啊。群晖“买软件，送硬件”的名号由来已久，我倒认为，用 1200 多人民币的价格，就可以用上群晖提供的绝大部分软件服务，那可谓是非常赚啦。</p>
+
+<p>  我为什么不攒一台 NAS 呢？作为一个软件工程师，我确实可以攒一台机器，网上也有很多自攒 NAS 的教程。但是我在这方面并不想花费太多时间和精力折腾。我需要一台运行稳定、功能成熟的 NAS。我可不想三天两头折腾宕机的 NAS，所以在这方面用金钱换时间和精力是很合算的，况且数据也是无价的。</p>
+
+<p>  群晖的上手非常容易。按照说明书安装硬盘、连接电源线和网线就可以直接开机了。系统安装和软件设置也是傻瓜化操作，跟着向导一路点击下一步即可。所有关键的设置项都有详细的说明，基本不会出现配置错误的情况，非常贴心。设置好硬盘、共享文件夹和用户账户，就可以从局域网中访问 NAS 中的数据了。从拆箱到基本设置完成，大概仅用了 15 分钟左右。</p>
+
+<p>  群晖 NAS 中运行的是 Synology DiskStation Manager (DSM) 操作系统。DSM 是群晖基于 Linux 专为其 NAS 产品开发的操作系统。DSM 中，套件(Package)的概念类似于应用程序。但是和应用程序又有一些区别。一个套件是若干应用程序、数据和配置的集合，它为用户提供了一整套完整的功能。DSM 把各种功能以套件的形式提供给用户。从套件中心下载和安装套件完全都是全自动的，即插即用，非常方便。</p>
+
+<p>  如果说群晖 NAS 的基础功能让我非常满意的话，那么它的套件中心则让我惊喜不已。Photo Station 可以让用户浏览存储在 NAS 上的照片、备份设备上的照片至 NAS；Audio Station 和 Video Station 分别允许用户在线播放存储在 NAS 上的音乐和影片；Download Station 允许用户使用 NAS 从网络上下载文件，实现离线下载功能；Cloud Sync 用来同步其他网络存储服务上的数据，例如 Google Drive、Microsoft OneDrive 等；Synology Drive 可以同步 NAS 和用户设备上的数据。而这些只是我常用的几个套件，群晖的套现中心中还有很多套件，实现各种各样的功能。配合各种优秀的套件，这台 NAS 摇身一变，成为了一台家庭多媒体数据中心。除了官方套件，群晖还支持第三方开发的套件，甚至还有专为群晖 NAS 开发第三方套件的社区。这大大增加了 DSM 的可玩性。</p>
+
+<p>  家庭环境中的 NAS 往往部署在局域网内，且没有固定的公网 IP。所以使用一般手段从公网访问 NAS 非常不方便。群晖为用户提供了 QuickConnect 服务。NAS 和用户通过 QuickConnect 实现内网穿透。上面提到的各种套件，都可以通过 QuickConnect 实现在公网上访问。但是由于所有的数据都依赖 QuickConnect 服务的中转。所以访问速度比较慢。</p>
+
+<p>  最开始，我主要是在家里通过局域网连接 NAS。后来随着越来越多的数据都保存在 NAS 上，再加上使用习惯的养成，我越来越依赖 NAS 上的服务。通过公网访问 NAS 的情况增加了，QuickConnect 已经不能满足需求了。</p>
+
+<p>  于是我向网络运营商申请了公网 IP。在这里解释一下，由于 IPv4 地址资源有限，默认情况下家用固定宽带服务不向用户提供公网 IP 地址，而是运营商的内网 IP 地址。如果设备位于运营商的内网中，则无法通过公网访问。主动申请后，运营商则会给用户提供公网 IP 地址。目前申请公网 IP 是免费的。由于需要频繁的访问 NAS 中的数据，NAS 的上行流量就变得非常重要了。我将原来的 200M 的宽带套餐升级为 500M，上行流量则由原来的 20M 提高到了 100M。对于个人使用来说，已经足够了。</p>
+
+<p>  要想顺畅地从公网访问 NAS，只有公网 IP 还不够，因为它不是固定 IP 地址。每次 PPPoE 拨号，都会从运营商获取不通的 IP 地址。群晖提供了 DDNS 服务。DDNS 服务可以把域名解析到动态变化的 IP 地址上。这样就算每次拨号获取的地址不通，也可以通过固定的域名访问 NAS。通过这些设置，之前的“泉眼无声惜细流”变成了“不尽长江滚滚来”。</p>
+
+<p>  DS216j 有两个盘位。最初我只购买了一块 3TB 的硬盘。随着数据增多，两年后我又买了一块 4TB 的硬盘。我并没有组 Raid，一方面是因为两块硬盘的 Raid 方案都不适合我。另一方面，我对可用性的要求并不是很高，系统出问题后，直接从备份中恢复数据即可。</p>
+
+<p>  我将我的所有数据分为三类。第一类是重要且访问频度高的数据，例如照片和日常文档。这些数据占用空间不大（通常在 200GB 以下），但是丢失后无法恢复。对于这类数据，我每周进行一次备份，保留最近的三次备份，在硬盘和网盘中各保存一份。第二类是访问频度不高，丢失后不容易找回的数据，例如游戏、电子书和音乐。这类数据占用空间略大，通常在 500GB 至 1TB 之间。它和第一类数据采取同样的备份方法，只不过频率调整为半年至一年一次。第三类数据是访问频度低，丢失后较容易找回的数据。这类数据具有收藏属性，占用空间大，往往没有上限。我把这类数据直接存储在普通硬盘上，一旦硬盘存满，就从设备上取下来，贴上标签，断电保存。然后给设备换一块新硬盘。</p>
+
+<p>  幸运的是，直到现在我还没有使用过这些备份，DS216j 一直在稳定运行中。不过我清楚地认识到，出问题只是时间问题，我依然要保持备份数据的习惯。</p>
+
+<p align="right">——2022年01月26日</p>]]></content><author><name></name></author><category term="群晖" /><category term="NAS" /><summary type="html"><![CDATA[  2017 年，我购买了第一台 NAS：群晖 DS216j。当时最主要的需求就是数据存储。文档资料、影音视频、家庭照片，这些资料随着时间的推移，越积越多。单纯使用 PC 硬盘管理资料已经无法满足需求了。我曾经考虑过在线网盘，但是大部分网盘产品都需要用户在存储容量、传输带宽和订阅费用三者间取舍。况且，虽然技术上，网盘能够很好地保证数据的安全性。但是仍然有很多非技术性因素，让我对网盘上的数据安全性充满担心——NAS 几乎是必然的选择。]]></summary></entry><entry><title type="html">今非昔比的书店</title><link href="/2020/05/20/bookshop-changed" rel="alternate" type="text/html" title="今非昔比的书店" /><published>2020-05-20T22:45:00+08:00</published><updated>2020-05-20T22:45:00+08:00</updated><id>/2020/05/20/bookshop-changed</id><content type="html" xml:base="/2020/05/20/bookshop-changed"><![CDATA[<p>  今天吃完午饭，我和子晨去了附近的一家书店。这家书店有一个奇怪的名字——言几又。</p>
 
 <p>  我很少去书店，几乎所有的书都是从网上买。之所以会去言几又，是因为小珂单位发了一张预付卡。而书店又恰好离公司非常近，我就期望着多少能买几本书。</p>
 
@@ -570,36 +596,4 @@ test.Release.cspy.ps1
 
 <p>　　走时，环顾空荡荡的院子，好一个“清角吹寒，都在空城”！</p>
 
-<p align="right">——2015年2月19日 凌晨</p>]]></content><author><name></name></author><summary type="html"><![CDATA[　　小时候是在地质八队长大的。说那个院子依山傍水一点也不为过。后墙依着秦岭的小土丘，西边靠着太平河，仅有半条街那么远。]]></summary></entry><entry><title type="html">那些年，我们遵守的承诺</title><link href="/2012/05/06/the-promises-we-kept" rel="alternate" type="text/html" title="那些年，我们遵守的承诺" /><published>2012-05-06T08:00:00+08:00</published><updated>2012-05-06T08:00:00+08:00</updated><id>/2012/05/06/the-promises-we-kept</id><content type="html" xml:base="/2012/05/06/the-promises-we-kept"><![CDATA[<p>  吃过晚饭，趁着天色还明亮，我提着水桶在楼下洗车。边上有一堆沙子，邻居家的小女孩拿着小铲子独自玩得不亦乐乎。</p>
-
-<p>  没过一会，来了一个小男孩。他总是和她在一起玩，我经常见。</p>
-
-<p>  小男孩脸上洋溢着笑，说：“咱俩一起玩吧！”</p>
-
-<p>  女孩看了他一下，脸上也不高兴：“不行，昨天你都不听我话。”</p>
-
-<p>  男孩蹲下来，手里抓着沙子说：“我今天听你话！”</p>
-
-<p>  “不信！再说我马上回家吃饭了”</p>
-
-<p>  “你吃饭的时候，我在这等你。”</p>
-
-<p>  “拉钩！”</p>
-
-<p>  “好！”</p>
-
-<p>  两个小家伙一本正经的开始“拉钩上吊”。</p>
-
-<p>  女孩的妈妈从楼上窗户探出头，叫了女孩的名字。女孩起来拍拍手，跑上楼去。男孩接过铲子继续着女孩未完成的“事业”。</p>
-
-<p>  之后，陆续有两三个伙伴来叫男孩去别处玩。男孩只是抬头说“我在等西西”。</p>
-
-<p>  大约过了半个小时，我刚擦完车，正准备离开。女孩才跑下楼来，跳着笑着加入男孩。</p>
-
-<p>  我提着桶上楼时，回头看了一眼。两个小家伙认真的过着家家，俨然一副要白头偕老的架势。</p>
-
-<p>  人与人之间的承诺，莫不过如此。长大了，懂得多了，却忽视了本来很重要的东西。</p>
-
-<p>  成长的同时，也回头看看！那些年，我们遵守的承诺！</p>
-
-<p align="right">——2012年05月06日</p>]]></content><author><name></name></author><category term="思考" /><category term="生活" /><summary type="html"><![CDATA[  吃过晚饭，趁着天色还明亮，我提着水桶在楼下洗车。边上有一堆沙子，邻居家的小女孩拿着小铲子独自玩得不亦乐乎。]]></summary></entry></feed>
+<p align="right">——2015年2月19日 凌晨</p>]]></content><author><name></name></author><summary type="html"><![CDATA[　　小时候是在地质八队长大的。说那个院子依山傍水一点也不为过。后墙依着秦岭的小土丘，西边靠着太平河，仅有半条街那么远。]]></summary></entry></feed>
