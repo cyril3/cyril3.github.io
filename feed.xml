@@ -1,4 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-01-26T14:12:51+08:00</updated><id>/feed.xml</id><title type="html">Bingwhispers</title><subtitle>Hi there!</subtitle><entry><title type="html">群晖 NAS 使用心得（上）</title><link href="/2022/01/26/experiences-on-synology-nas-1" rel="alternate" type="text/html" title="群晖 NAS 使用心得（上）" /><published>2022-01-26T13:56:00+08:00</published><updated>2022-01-26T13:56:00+08:00</updated><id>/2022/01/26/experiences-on-synology-nas-1</id><content type="html" xml:base="/2022/01/26/experiences-on-synology-nas-1"><![CDATA[<p>  2017 年，我购买了第一台 NAS：群晖 DS216j。当时最主要的需求就是数据存储。文档资料、影音视频、家庭照片，这些资料随着时间的推移，越积越多。单纯使用 PC 硬盘管理资料已经无法满足需求了。我曾经考虑过在线网盘，但是大部分网盘产品都需要用户在存储容量、传输带宽和订阅费用三者间取舍。况且，虽然技术上，网盘能够很好地保证数据的安全性。但是仍然有很多非技术性因素，让我对网盘上的数据安全性充满担心——NAS 几乎是必然的选择。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-01-27T16:55:40+08:00</updated><id>/feed.xml</id><title type="html">Bingwhispers</title><subtitle>Hi there!</subtitle><entry><title type="html">群晖 NAS 使用心得（下）</title><link href="/2022/01/27/experiences-on-synology-nas-2" rel="alternate" type="text/html" title="群晖 NAS 使用心得（下）" /><published>2022-01-27T16:46:00+08:00</published><updated>2022-01-27T16:46:00+08:00</updated><id>/2022/01/27/experiences-on-synology-nas-2</id><content type="html" xml:base="/2022/01/27/experiences-on-synology-nas-2"><![CDATA[<p>  由于 DS216j 的性能比较弱，很多服务虽然可以用，但是体验并不好。在使用 DS216j 两三年后，我逐渐有了换机器的想法。一方面是想改善现有服务的使用体验，另一方面是觊觎新功能。</p>
+
+<p>  先说说性能问题把：用 Moments 套件打开相册，翻到较早的照片时，照片缩略图需要很久才能打开。看不到缩略图就很难快速找到想要的照片；使用 Video Station 串流影片时，解码能力有限，1080P 以上清晰度的影片最大只能以 720P 来解码；多个服务并发运行时，反应速度有明显降低；更换硬盘需要拆外壳，很不方便。</p>
+
+<p>  新功能稍后再说，总之在 DS216j 向我报告第一块 3TB 的硬盘发生故障，需要更换后，我决定买一台新 NAS。</p>
+
+<p>  就在几天前，我收到了这台新 NAS：DS920+。我本来想先用一周的时间体验和研究一下新机器，等它的各项配置和服务都稳定后，再把 DS216j 上的服务和资料逐渐迁移至 DS920+ 上。然而出乎我意料的是，一切配置都很顺利，包括很多新功能。所以 DS920+ 很快就“转正”了。</p>
+
+<p>  相比于 DS216j，DS920+ 上可用的套件增加了许多。我最感兴趣的是 Docker 和虚拟化。</p>
+
+<p>  我有一些服务平时运行在 PC 的虚拟机中，比如 beancount-fava 和此博客的 Jekyll 工程。但是每次都需要打开虚拟机，切换目录，运行程序，这样还是比较麻烦的。现在我把这些服务都放在 NAS 的 Docker 中运行，就省去了这些繁琐的操作。群晖的 Docker 套件基于标准的 Docker，完整支持 dockerhub。既有适合新手上路的图形界面，也有适合高端玩家的命令行程序。可以说，有了 Docker，只有你想不到的，没有群晖做不到的。</p>
+
+<p>  对于个人用户来说，DSM 上的虚拟机功能比较完整。它的虚拟机可支持 Windows、Linux、DSM 和其他自定义的操作系统。创建好虚拟机，设置基础的硬件信息后，就可以开机了。显示终端被重定向到了一个 Web 页面，这一点和其他 VPS 厂商一样。虚拟机管理器中有简洁明了的存储管理和网络管理，快照、备份等常用功能也都具备。在 DSM 中再安装一个 DSM 的虚拟机听起来确实很有趣，不过除了做一些实验配置以外，我还没有想到有什么实际用途。群晖随机赠送一个 DSM 虚拟证书，每台设备可免费安装一个 DSM 虚拟机。额外的虚拟机需要购买许可。</p>
+
+<p>  默认情况下，DSM 的虚拟机是基础版。专业版是在基础版上增加了集群管理的功能，不过专业版需要额外付费。</p>
+
+<p>  总之，对于个人用户而言，基础版的 DSM 的虚拟化基本满足日常使用。</p>
+
+<p>  群晖还有其他的一些优点。例如，技术支持比较快。我提过两次工单，基本都在第二个工作日解决了。文档比较详细，如果有哪些不懂得地方，大部分问题都可以在官方网站上找到资料。这些优点常常让人心里格外舒坦，并感慨其物超所值。</p>
+
+<p>  同时，我也注意到群晖 NAS 上也存在一些缺点。关于相册服务，从最开始的 Photo Station，到后来的 Moments，再到现在的 Synology Photos，这个服务所对应的套件基本都是推倒重来。虽然每次更新，官方都宣称存储向前兼容。但我实际上每次都被强行改变了使用习惯。另外，DSM 上的套件基本上都是满足功能需求。在易用性和便捷性上，和专业的软件还有一些差距。</p>
+
+<p>  限于篇幅，对于群晖 NAS 的使用体验介绍不能面面俱到。随着我继续使用，它也会给我的数码生活带来更多活力和新奇的体验。</p>
+
+<p align="right">——2022年01月27日</p>]]></content><author><name></name></author><category term="群晖" /><category term="NAS" /><summary type="html"><![CDATA[  由于 DS216j 的性能比较弱，很多服务虽然可以用，但是体验并不好。在使用 DS216j 两三年后，我逐渐有了换机器的想法。一方面是想改善现有服务的使用体验，另一方面是觊觎新功能。]]></summary></entry><entry><title type="html">群晖 NAS 使用心得（上）</title><link href="/2022/01/26/experiences-on-synology-nas-1" rel="alternate" type="text/html" title="群晖 NAS 使用心得（上）" /><published>2022-01-26T13:56:00+08:00</published><updated>2022-01-26T13:56:00+08:00</updated><id>/2022/01/26/experiences-on-synology-nas-1</id><content type="html" xml:base="/2022/01/26/experiences-on-synology-nas-1"><![CDATA[<p>  2017 年，我购买了第一台 NAS：群晖 DS216j。当时最主要的需求就是数据存储。文档资料、影音视频、家庭照片，这些资料随着时间的推移，越积越多。单纯使用 PC 硬盘管理资料已经无法满足需求了。我曾经考虑过在线网盘，但是大部分网盘产品都需要用户在存储容量、传输带宽和订阅费用三者间取舍。况且，虽然技术上，网盘能够很好地保证数据的安全性。但是仍然有很多非技术性因素，让我对网盘上的数据安全性充满担心——NAS 几乎是必然的选择。</p>
 
 <p>  DS216j 是群晖的入门级产品，价格低，最大支持两块硬盘，性价比非常高。了解群晖 NAS 的读者可能会对我的说法嗤之以鼻：DS216j 如此孱弱的性能如何称得上性价比高？这里的性价比，比的可不是性能啊。群晖“买软件，送硬件”的名号由来已久，我倒认为，用 1200 多人民币的价格，就可以用上群晖提供的绝大部分软件服务，那可谓是非常赚啦。</p>
 
@@ -22,9 +46,7 @@
 
 <p>  我将我的所有数据分为三类。第一类是重要且访问频度高的数据，例如照片和日常文档。这些数据占用空间不大（通常在 200GB 以下），但是丢失后无法恢复。对于这类数据，我每周进行一次备份，保留最近的三次备份，在硬盘和网盘中各保存一份。第二类是访问频度不高，丢失后不容易找回的数据，例如游戏、电子书和音乐。这类数据占用空间略大，通常在 500GB 至 1TB 之间。它和第一类数据采取同样的备份方法，只不过频率调整为半年至一年一次。第三类数据是访问频度低，丢失后较容易找回的数据。这类数据具有收藏属性，占用空间大，往往没有上限。我把这类数据直接存储在普通硬盘上，一旦硬盘存满，就从设备上取下来，贴上标签，断电保存。然后给设备换一块新硬盘。</p>
 
-<p>  幸运的是，直到现在我还没有使用过这些备份，DS216j 一直在稳定运行中。不过我清楚地认识到，出问题只是时间问题，我依然要保持备份数据的习惯。</p>
-
-<p align="right">——2022年01月26日</p>]]></content><author><name></name></author><category term="群晖" /><category term="NAS" /><summary type="html"><![CDATA[  2017 年，我购买了第一台 NAS：群晖 DS216j。当时最主要的需求就是数据存储。文档资料、影音视频、家庭照片，这些资料随着时间的推移，越积越多。单纯使用 PC 硬盘管理资料已经无法满足需求了。我曾经考虑过在线网盘，但是大部分网盘产品都需要用户在存储容量、传输带宽和订阅费用三者间取舍。况且，虽然技术上，网盘能够很好地保证数据的安全性。但是仍然有很多非技术性因素，让我对网盘上的数据安全性充满担心——NAS 几乎是必然的选择。]]></summary></entry><entry><title type="html">今非昔比的书店</title><link href="/2020/05/20/bookshop-changed" rel="alternate" type="text/html" title="今非昔比的书店" /><published>2020-05-20T22:45:00+08:00</published><updated>2020-05-20T22:45:00+08:00</updated><id>/2020/05/20/bookshop-changed</id><content type="html" xml:base="/2020/05/20/bookshop-changed"><![CDATA[<p>  今天吃完午饭，我和子晨去了附近的一家书店。这家书店有一个奇怪的名字——言几又。</p>
+<p>  幸运的是，直到现在我还没有使用过这些备份，DS216j 一直在稳定运行中。不过我清楚地认识到，出问题只是时间问题，我依然要保持备份数据的习惯。</p>]]></content><author><name></name></author><category term="群晖" /><category term="NAS" /><summary type="html"><![CDATA[  2017 年，我购买了第一台 NAS：群晖 DS216j。当时最主要的需求就是数据存储。文档资料、影音视频、家庭照片，这些资料随着时间的推移，越积越多。单纯使用 PC 硬盘管理资料已经无法满足需求了。我曾经考虑过在线网盘，但是大部分网盘产品都需要用户在存储容量、传输带宽和订阅费用三者间取舍。况且，虽然技术上，网盘能够很好地保证数据的安全性。但是仍然有很多非技术性因素，让我对网盘上的数据安全性充满担心——NAS 几乎是必然的选择。]]></summary></entry><entry><title type="html">今非昔比的书店</title><link href="/2020/05/20/bookshop-changed" rel="alternate" type="text/html" title="今非昔比的书店" /><published>2020-05-20T22:45:00+08:00</published><updated>2020-05-20T22:45:00+08:00</updated><id>/2020/05/20/bookshop-changed</id><content type="html" xml:base="/2020/05/20/bookshop-changed"><![CDATA[<p>  今天吃完午饭，我和子晨去了附近的一家书店。这家书店有一个奇怪的名字——言几又。</p>
 
 <p>  我很少去书店，几乎所有的书都是从网上买。之所以会去言几又，是因为小珂单位发了一张预付卡。而书店又恰好离公司非常近，我就期望着多少能买几本书。</p>
 
